@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+header img {
+  width: 180px;
+  max-width: 100%;
+  margin: 20px auto;
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.search-container {
+    background-color: #f2f2f2;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    margin-bottom: 30px;
+  }
+  
+  input[type="text"] {
+    padding: 14px 15px;
+    font-size: 16px;
+    flex: 1;
+    border: 1px solid #ccc;
+    border-radius: 6px 0 0 6px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  input[type="text"]:focus {
+    border-color: #ff6b6b;
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 107, 107, 0.4);
+  }
+  
+  button {
+    padding: 14px 25px;
+    font-size: 16px;
+    background-color: #333;
+    color: white;
+    border: 1px solid #333;
+    border-radius: 0 6px 6px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  button:hover {
+    background-color: #555;
+    transform: translateY(-2px);
+  }
+
+/* Recipe Container */
+#recipeContainer {
+  padding: 20px 0;
+}
+
+.cocktail-block {
+  background: white;
+  padding: 20px;
+  margin: 30px auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  max-width: 800px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cocktail-block:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.cocktail-block h3 {
+  font-size: 22px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #333;
+  margin-top: 0;
+  transition: color 0.3s ease;
+}
+
+.cocktail-block h3:hover {
+  color: #ff6b6b;
+}
+
+.cocktail-block p {
+  line-height: 1.6;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 20px 0;
+}
+
+/* Footer */
+footer {
+  background: url('/Assets/Images/acewallpapercomp.jpeg') no-repeat center center;
+  background-size: cover;
+  padding: 30px 20px;
+  color: white;
+  font-size: 14px;
+  text-align: center;
+  position: relative;
+}
+
+footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 0;
+}
+
+footer p {
+  position: relative;
+  z-index: 1;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+  #search-container {
+    flex-direction: column;
+  }
+
+  input[type="text"] {
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+
+  button {
+    border-radius: 4px;
+  }
+
+  .cocktail-block {
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  footer {
+    padding: 10px;
+  }
+}
