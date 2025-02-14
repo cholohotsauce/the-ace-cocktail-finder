@@ -108,7 +108,7 @@ hr {
 
 /* Footer */
 footer {
-  background: url('/Assets/Images/acewallpapercomp.jpeg') no-repeat center center;
+  background: url('./Assets/Images/acewallpapercomp.jpeg') no-repeat center center;
   background-size: cover;
   padding: 30px 20px;
   color: white;
