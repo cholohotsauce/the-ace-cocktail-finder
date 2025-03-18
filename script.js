@@ -210,7 +210,7 @@ const cocktails = {
         garnish: "Clementine Wheel"
       },
       "El Francisco": {
-        ingredients: "1 oz mezcal, 1 oz Francisco Fernet, 1 oz dry curacao, Juice of 1 lime, Nip of salt",
+        ingredients: "1.5 oz mezcal, 1 oz dry curacao, 0.5 Campari, 0.25 Fernet Branca, 6 Dashes of Rhubarb bitters, Juice of 1 lime, Nip of salt",
         instructions: "Stir. Serve in a rocks glass with a big cube. Add 2 spritzes of absinthe. Garnish with a lime or orange peel, wedge, or wheel.",
         glassware: "Rocks Glass",
         garnish: "Lime or Orange Peel, Wedge, or Wheel"
