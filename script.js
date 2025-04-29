@@ -30,7 +30,7 @@ const cocktails = {
         garnish: "Lime Peel, Wedge, or Wheel"
       },
       "El Sirviente": {
-        ingredients: "1.25 oz gin, 0.75 oz Strega, 0.75 oz lime juice, 0.75 oz chamomile syrup, Egg white",
+        ingredients: "1.25 oz gin, 0.75 oz Yellow Chartreuse, 0.75 oz lime juice, 0.75 oz chamomile syrup, 5 drops anise tincture, 5 drops saffron tincture, Egg white",
         instructions: "Dry shake, then shake with ice, double strain. Serve in a chilled Nick and Nora glass. Garnish with a lime peel, wedge, or wheel.",
         glassware: "Nick & Nora Glass",
         garnish: "Lime Peel, Wedge, or Wheel"
