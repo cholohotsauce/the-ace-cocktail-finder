@@ -30,7 +30,7 @@ const cocktails = {
         garnish: "Lime Peel, Wedge, or Wheel"
       },
       "El Sirviente": {
-        ingredients: "1.25 oz gin, 0.75 oz Yellow Chartreuse, 0.75 oz lime juice, 0.75 oz chamomile syrup, 5 drops anise tincture, 5 drops saffron tincture, Egg white",
+        ingredients: "1.25 oz gin, 0.75 oz Strega, 0.75 oz lime juice, 0.75 oz chamomile syrup, Egg white",
         instructions: "Dry shake, then shake with ice, double strain. Serve in a chilled Nick and Nora glass. Garnish with a lime peel, wedge, or wheel.",
         glassware: "Nick & Nora Glass",
         garnish: "Lime Peel, Wedge, or Wheel"
@@ -210,7 +210,7 @@ const cocktails = {
         garnish: "Clementine Wheel"
       },
       "El Francisco": {
-        ingredients: "1.5 oz mezcal, 1 oz dry curacao, 0.5 Campari, 0.25 Fernet Branca, 6 Dashes of Rhubarb bitters, Juice of 1 lime, Nip of salt",
+        ingredients: "1 oz mezcal, 1 oz Francisco Fernet, 1 oz dry curacao, Juice of 1 lime, Nip of salt",
         instructions: "Stir. Serve in a rocks glass with a big cube. Add 2 spritzes of absinthe. Garnish with a lime or orange peel, wedge, or wheel.",
         glassware: "Rocks Glass",
         garnish: "Lime or Orange Peel, Wedge, or Wheel"
@@ -231,34 +231,86 @@ const cocktails = {
 
     // Add the remaining cocktails here.
   };
-  
-  function formatText(text) {
-    return text.replace(/, /g, '<br>'); // Only replace commas followed by a space
+
+// Format ingredients list for readability
+function formatText(text) {
+  return text.replace(/, /g, '<br>');
+}
+
+document.getElementById("searchBtn").addEventListener("click", handleSearch);
+document.getElementById("cocktailInput").addEventListener("keydown", function (e) {
+  if (e.key === "Enter") {
+    handleSearch();
   }
-  
-  document.getElementById("searchBtn").addEventListener("click", function () {
-    const cocktailName = document.getElementById("cocktailInput").value.trim().toLowerCase();
-    const recipeContainer = document.getElementById("recipeContainer");
-    const nameElement = document.getElementById("cocktailName");
-    const recipeElement = document.getElementById("cocktailRecipe");
-  
-    let matches = Object.keys(cocktails).filter(name => name.toLowerCase().includes(cocktailName));
-  
-    if (matches.length > 0) {
-      nameElement.textContent = `${matches.length} cocktail${matches.length > 1 ? 's' : ''} found:`;
-      recipeElement.innerHTML = matches.map(match => `
-        <div class="cocktail-block">
-          <h3>${match}</h3>
-          <p><strong>Ingredients:</strong><br>${formatText(cocktails[match].ingredients)}</p>
-          <p><strong>Instructions:</strong><br>${cocktails[match].instructions}</p>
-          ${cocktails[match].glassware ? `<p><strong>Glassware:</strong> ${cocktails[match].glassware}</p>` : ""}
-          ${cocktails[match].garnish ? `<p><strong>Garnish:</strong> ${cocktails[match].garnish}</p>` : ""}
-        </div><hr>
-      `).join('');
-      recipeContainer.classList.remove("hidden");
-    } else {
-      nameElement.textContent = "Cocktail not found";
-      recipeElement.textContent = "Please check the spelling or try a different cocktail.";
-      recipeContainer.classList.remove("hidden");
+});
+
+function handleSearch() {
+  const cocktailInput = document.getElementById("cocktailInput");
+  const cocktailName = cocktailInput.value.trim().toLowerCase();
+  const recipeContainer = document.getElementById("recipeContainer");
+  const nameElement = document.getElementById("cocktailName");
+  const recipeElement = document.getElementById("cocktailRecipe");
+
+  let matches = Object.keys(cocktails).filter(name =>
+      name.toLowerCase().includes(cocktailName)
+  );
+
+  if (matches.length > 0) {
+    nameElement.textContent = `${matches.length} cocktail${matches.length > 1 ? 's' : ''} found:`;
+    recipeElement.innerHTML = matches.map(match => `
+      <div class="cocktail-block">
+        <h3>${match}</h3>
+        <p><strong>Ingredients:</strong><br>${formatText(cocktails[match].ingredients)}</p>
+        <p><strong>Instructions:</strong><br>${cocktails[match].instructions}</p>
+        ${cocktails[match].glassware ? `<p><strong>Glassware:</strong> ${cocktails[match].glassware}</p>` : ""}
+        ${cocktails[match].garnish ? `<p><strong>Garnish:</strong> ${cocktails[match].garnish}</p>` : ""}
+        <button class="add-to-queue" data-cocktail="${match}">Add to Queue</button>
+      </div><hr>
+    `).join('');
+    recipeContainer.classList.remove("hidden");
+  } else {
+    nameElement.textContent = "Cocktail not found";
+    recipeElement.textContent = "Please check the spelling or try a different cocktail.";
+    recipeContainer.classList.remove("hidden");
+  }
+
+  // Reset input field and refocus
+  cocktailInput.value = "";
+  cocktailInput.focus();
+}
+
+// Queue feature
+const queueContainer = document.getElementById("queueContainer");
+const queueList = document.getElementById("queueList");
+const clearQueueBtn = document.getElementById("clearQueue");
+
+document.addEventListener("click", function (e) {
+  if (e.target.classList.contains("add-to-queue")) {
+    const name = e.target.getAttribute("data-cocktail");
+    const cocktail = cocktails[name];
+    const card = document.createElement("div");
+    card.classList.add("cocktail-block");
+    card.innerHTML = `
+      <h3>${name}</h3>
+      <p><strong>Ingredients:</strong><br>${formatText(cocktail.ingredients)}</p>
+      <p><strong>Instructions:</strong><br>${cocktail.instructions}</p>
+      ${cocktail.glassware ? `<p><strong>Glassware:</strong> ${cocktail.glassware}</p>` : ""}
+      ${cocktail.garnish ? `<p><strong>Garnish:</strong> ${cocktail.garnish}</p>` : ""}
+      <button class="remove-from-queue">Remove</button>
+    `;
+    queueList.appendChild(card);
+    queueContainer.classList.remove("hidden");
+  }
+
+  if (e.target.classList.contains("remove-from-queue")) {
+    e.target.parentElement.remove();
+    if (!queueList.children.length) {
+      queueContainer.classList.add("hidden");
     }
-  });
+  }
+});
+
+clearQueueBtn.addEventListener("click", () => {
+  queueList.innerHTML = "";
+  queueContainer.classList.add("hidden");
+});
