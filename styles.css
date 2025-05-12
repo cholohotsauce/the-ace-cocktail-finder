@@ -22,10 +22,11 @@ h1 {
 }
 
 .search-container {
-    background-color: #f2f2f2;
-    padding: 25px 30px;
-    border-radius: 12px;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    background: url('./Assets/Images/acewallpapercomp.jpeg') no-repeat center center;
+    background-size: cover;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: inline-block;
     margin-bottom: 30px;
   }
@@ -108,7 +109,7 @@ hr {
 
 /* Footer */
 footer {
-  background: url('./Assets/Images/acewallpapercomp.jpeg') no-repeat center center;
+  background: url('/Assets/Images/acewallpapercomp.jpeg') no-repeat center center;
   background-size: cover;
   padding: 30px 20px;
   color: white;
@@ -166,4 +167,43 @@ footer p {
   footer {
     padding: 10px;
   }
+}
+
+#queueContainer {
+  margin: 30px auto;
+  max-width: 800px;
+  text-align: left;
+}
+
+#queueContainer h2 {
+  font-size: 22px;
+  color: #444;
+}
+
+.remove-from-queue {
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  margin-top: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.remove-from-queue:hover {
+  background-color: #d33;
+}
+
+#clearQueue {
+  background-color: #999;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#clearQueue:hover {
+  background-color: #777;
 }
