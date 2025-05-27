@@ -30,7 +30,7 @@ const cocktails = {
         garnish: "Lime Peel, Wedge, or Wheel"
       },
       "El Sirviente": {
-        ingredients: "1.25 oz gin, 0.75 oz Strega, 0.75 oz lime juice, 0.75 oz chamomile syrup, Egg white",
+        ingredients: "1.25 oz gin, 0.75 oz yellow Chartreuse, 0.75 oz lime juice, 0.75 oz chamomile syrup, 5 drops anise tincture, 5 drops saffron Tincture, egg white",
         instructions: "Dry shake, then shake with ice, double strain. Serve in a chilled Nick and Nora glass. Garnish with a lime peel, wedge, or wheel.",
         glassware: "Nick & Nora Glass",
         garnish: "Lime Peel, Wedge, or Wheel"
@@ -60,7 +60,7 @@ const cocktails = {
         garnish: "Candied Ginger or Lemon Peel"
       },
       "El Pelican": {
-        ingredients: "1.5 oz bourbon, 1 oz sake, 1 oz pear juice, 0.5 oz ginger syrup, 4 drops sesame oil, Splash of lemon juice, Egg white",
+        ingredients: "1.5 oz bourbon, 1 oz sake, 1 oz pear juice, 0.5 oz ginger syrup, 1 or 2 drops sesame oil, Splash of lemon juice, Egg white",
         instructions: "Dry shake, then shake with ice, double strain. Serve in a chilled large Nick and Nora glass. Garnish with a lemon peel.",
         glassware: "Large Nick & Nora Glass",
         garnish: "Lemon Peel"
@@ -210,7 +210,7 @@ const cocktails = {
         garnish: "Clementine Wheel"
       },
       "El Francisco": {
-        ingredients: "1 oz mezcal, 1 oz Francisco Fernet, 1 oz dry curacao, Juice of 1 lime, Nip of salt",
+        ingredients: "1.5 oz mezcal, 1 oz dry curacao, 0.5 oz Campari, 0.25 Fernet Branca, Juice of 1 lime wedge, Nip of salt",
         instructions: "Stir. Serve in a rocks glass with a big cube. Add 2 spritzes of absinthe. Garnish with a lime or orange peel, wedge, or wheel.",
         glassware: "Rocks Glass",
         garnish: "Lime or Orange Peel, Wedge, or Wheel"
