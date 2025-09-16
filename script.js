@@ -35,6 +35,12 @@ const cocktails = {
         glassware: "Nick & Nora Glass",
         garnish: "Lime Peel, Wedge, or Wheel"
       },
+      "El Doctor": {
+        ingredients: "1 oz gin, 0.75 oz Cynar, 0.5 oz St. Germain, 0.5 oz manzanilla brine, 0.5 oz lemon juice, 5 drops rosemary bitters, Tonic water (to top)",
+        instructions: "Shake all ingredients except tonic. Pour over ice in a wine glass. Fill with tonic water and garnish with a lemon peel.",
+        glassware: "Wine Glass",
+        garnish: "Lemon Peel"
+      },
       "Sidecar": {
         ingredients: "2 oz cognac, 0.75 oz dry curacao, 0.75 oz lemon juice, 0.5 oz rich simple syrup, 1 dash Angostura bitters",
         instructions: "Shake, double strain. Serve in a sugar-rimmed, chilled coupe or Nick and Nora glass. Garnish with an orange peel.",
