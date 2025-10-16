@@ -18,10 +18,10 @@ const cocktails = {
         garnish: "Angostura"
       },
       "El Vuelve a la Vida 231": {
-        ingredients: "1.25 oz cilantro mezcal, 1 oz vermouth bianco, 0.75 oz dry curacao, 0.75 oz lime juice",
-        instructions: "Shake, double strain. Serve in a chilled Nick and Nora glass. Add 2 spritzes of absinthe. Garnish with a lime wedge or wheel.",
-        glassware: "Nick & Nora Glass",
-        garnish: "Lime wedge or wheel"
+      ingredients: "0.75 oz cilantro mezcal, 0.5 oz regular mezcal, 1 oz vermouth bianco, 0.75 oz dry curacao, 0.75 oz lime juice",
+      instructions: "Shake, double strain. Serve in a chilled Nick and Nora glass. Add 2 spritzes of absinthe. Garnish with a lime wedge or wheel.",
+      glassware: "Nick & Nora Glass",
+      garnish: "Lime wedge or wheel"
       },
       "True Romance": {
         ingredients: "1.5 oz mezcal, 1 oz yellow Chartreuse, 0.75 oz Amaro Averna, Juice of 1 lime wedge, Nip of salt",
