@@ -53,6 +53,12 @@ const cocktails = {
         glassware: "Water Glass",
         garnish: "Lemon Peel"
       },
+      "El Araguato": {
+       ingredients: "2 oz Lot 40, 0.75 oz Diplomatico rum, 0.5 oz Campari, 0.5 oz pomegranate/cherry syrup, 3 dashes Peychaud's bitters, 3 sprays absinthe",
+       instructions: "Stir with ice. Double strain into a chilled coupe. Garnish with a lemon peel.",
+       glassware: "Chilled Coupe",
+       garnish: "Lemon Peel"
+      },
       "El Puerto Secreto": {
         ingredients: "1 oz spiced gin, 0.75 oz port, 0.75 oz honey syrup, 0.75 oz lemon juice, 4 dashes of orange bitters",
         instructions: "Shake, double strain. Serve in a chilled coupe or Nick and Nora glass. Garnish with a lemon peel.",
@@ -216,7 +222,7 @@ const cocktails = {
         garnish: "Clementine Wheel"
       },
       "El Francisco": {
-        ingredients: "1.5 oz mezcal, 1 oz dry curacao, 0.5 oz Campari, 0.25 Fernet Branca, Juice of 1 lime wedge, Nip of salt",
+        ingredients: "1 oz mezcal, 1 oz dry curacao, 1 oz Fernet Francisco, Juice of 1 lime wedge, Nip of salt",
         instructions: "Stir. Serve in a rocks glass with a big cube. Add 2 spritzes of absinthe. Garnish with a lime or orange peel, wedge, or wheel.",
         glassware: "Rocks Glass",
         garnish: "Lime or Orange Peel, Wedge, or Wheel"
